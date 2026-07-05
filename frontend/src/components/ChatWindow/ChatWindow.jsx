@@ -1,9 +1,11 @@
-function ChatWindow() {
-  return (
-    <main>
-      <h2>Chat Window</h2>
-    </main>
-  );
+import "./ChatWindow.css";
+
+function ChatWindow(){
+    return(
+        <main className="chat-window">
+
+        </main>
+    )
 }
 
 export default ChatWindow;

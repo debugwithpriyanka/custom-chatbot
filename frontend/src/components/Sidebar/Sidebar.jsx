@@ -1,9 +1,11 @@
-function Sidebar() {
-  return (
-    <aside>
-      <h2>Sidebar</h2>
-    </aside>
-  );
+import "./Sidebar.css";
+
+function Sidebar(){
+    return(
+        <aside className="sidebar">
+            Sidebar
+        </aside>
+    )
 }
 
 export default Sidebar;

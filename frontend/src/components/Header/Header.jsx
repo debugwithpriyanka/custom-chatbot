@@ -1,9 +1,11 @@
-function Header() {
-  return (
-    <header>
-      <h2>Header</h2>
-    </header>
-  );
+import "./Header.css";
+
+function Header(){
+    return(
+        <header className="header">
+            AI Assistant
+        </header>
+    )
 }
 
 export default Header;
