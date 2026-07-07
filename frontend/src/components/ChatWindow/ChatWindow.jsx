@@ -1,5 +1,6 @@
 import "./ChatWindow.css";
 import MessageBubble from "../MessageBubble/MessageBubble";
+import TypingIndicator from "../TypingIndicator/TypingIndicator";
 
 function ChatWindow({ messages, loading }) {
   return (
@@ -27,12 +28,7 @@ function ChatWindow({ messages, loading }) {
           />
         ))}
 
-        {loading && (
-          <MessageBubble
-            sender="bot"
-            text="Thinking..."
-          />
-        )}
+        {loading && <TypingIndicator />}
 
       </div>
 
