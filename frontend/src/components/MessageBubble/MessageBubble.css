@@ -1,0 +1,30 @@
+.message{
+    display:flex;
+    margin:20px;
+}
+
+.message.user{
+    justify-content:flex-end;
+}
+
+.message.bot{
+    justify-content:flex-start;
+}
+
+.bubble{
+    max-width:70%;
+    padding:14px 18px;
+    border-radius:16px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+.user .bubble{
+    background:#10A37F;
+    color:white;
+}
+
+.bot .bubble{
+    background:#303030;
+    color:white;
+}

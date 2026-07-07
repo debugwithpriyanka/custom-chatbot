@@ -1,37 +1,39 @@
 import { useState } from "react";
-
 import "./ChatInput.css";
 
-function ChatInput() {
+function ChatInput({ onSend, loading }) {
+  const [input, setInput] = useState("");
 
-    const [input, setInput] = useState("");
+  const handleSubmit = () => {
+    if (!input.trim()) return;
 
-    return (
+    onSend(input);
+    setInput("");
+  };
 
-        <div className="chat-input">
+  return (
+    <div className="chat-input">
+      <input
+        type="text"
+        placeholder="Message AI Assistant..."
+        value={input}
+        disabled={loading}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            handleSubmit();
+          }
+        }}
+      />
 
-            <input
-
-                type="text"
-
-                placeholder="Message AI Assistant..."
-
-                value={input}
-
-                onChange={(e) => setInput(e.target.value)}
-
-            />
-
-            <button>
-
-                Send
-
-            </button>
-
-        </div>
-
-    );
-
+      <button
+        onClick={handleSubmit}
+        disabled={loading}
+      >
+        {loading ? "..." : "Send"}
+      </button>
+    </div>
+  );
 }
 
 export default ChatInput;
