@@ -1,43 +1,40 @@
 import "./ChatWindow.css";
 import MessageBubble from "../MessageBubble/MessageBubble";
-import ChatContainer from "../ChatContainer/ChatContainer";
 
 function ChatWindow({ messages, loading }) {
   return (
     <main className="chat-window">
 
-      {messages.length === 0 && (
-        <h2
-          style={{
-            textAlign: "center",
-            marginTop: "100px",
-          }}
-        >
-          Start a conversation 👋
-        </h2>
-      )}
+      <div className="chat-content">
 
-      {messages.map((msg, index) => (
-        <MessageBubble
-          key={index}
-          sender={msg.sender}
-          text={msg.text}
-        />
-      ))}
+        {messages.length === 0 && (
+          <h2
+            style={{
+              textAlign: "center",
+              marginTop: "120px",
+              color: "#888",
+            }}
+          >
+            👋 Start a conversation
+          </h2>
+        )}
 
-      {loading && (
-        <MessageBubble
-          sender="bot"
-          text="Thinking..."
-        />
-      )}
+        {messages.map((msg, index) => (
+          <MessageBubble
+            key={index}
+            sender={msg.sender}
+            text={msg.text}
+          />
+        ))}
 
-      <ChatContainer>
+        {loading && (
+          <MessageBubble
+            sender="bot"
+            text="Thinking..."
+          />
+        )}
 
-        {/* messages */}
-
-    </ChatContainer>
-
+      </div>
 
     </main>
   );

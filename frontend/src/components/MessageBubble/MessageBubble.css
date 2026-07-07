@@ -1,6 +1,8 @@
 .message{
     display:flex;
-    margin:20px;
+    align-items:flex-end;
+    gap:12px;
+    margin:18px 0;
 }
 
 .message.user{
@@ -14,17 +16,20 @@
 .bubble{
     max-width:70%;
     padding:14px 18px;
-    border-radius:16px;
-    line-height:1.6;
+    border-radius:18px;
+    line-height:1.7;
     word-break:break-word;
+    font-size:15px;
 }
 
 .user .bubble{
     background:#10A37F;
     color:white;
+    border-bottom-right-radius:6px;
 }
 
 .bot .bubble{
     background:#303030;
     color:white;
+    border-bottom-left-radius:6px;
 }

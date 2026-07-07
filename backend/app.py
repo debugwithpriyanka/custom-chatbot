@@ -16,7 +16,7 @@ def chat():
     response = llm.invoke(msg)
 
     return jsonify({
-        "reply": response
+        "response": response
     })
 
 if __name__ == "__main__":
