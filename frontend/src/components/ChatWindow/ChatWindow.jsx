@@ -1,5 +1,6 @@
 import "./ChatWindow.css";
 import MessageBubble from "../MessageBubble/MessageBubble";
+import ChatContainer from "../ChatContainer/ChatContainer";
 
 function ChatWindow({ messages, loading }) {
   return (
@@ -30,6 +31,13 @@ function ChatWindow({ messages, loading }) {
           text="Thinking..."
         />
       )}
+
+      <ChatContainer>
+
+        {/* messages */}
+
+    </ChatContainer>
+
 
     </main>
   );
