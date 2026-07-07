@@ -1,8 +1,20 @@
 import "./ChatWindow.css";
 import MessageBubble from "../MessageBubble/MessageBubble";
 import TypingIndicator from "../TypingIndicator/TypingIndicator";
+import { useEffect, useRef } from "react";
+import "./ChatWindow.css";
+import MessageBubble from "../MessageBubble/MessageBubble";
+import TypingIndicator from "../TypingIndicator/TypingIndicator";
 
 function ChatWindow({ messages, loading }) {
+    const bottomRef = useRef(null);
+
+useEffect(() => {
+  bottomRef.current?.scrollIntoView({
+    behavior: "smooth",
+  });
+}, [messages, loading]);
+
   return (
     <main className="chat-window">
 
@@ -29,6 +41,10 @@ function ChatWindow({ messages, loading }) {
         ))}
 
         {loading && <TypingIndicator />}
+
+        const bottomRef = useRef(null);
+
+        <div ref={bottomRef}></div>
 
       </div>
 
