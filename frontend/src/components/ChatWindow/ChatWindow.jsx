@@ -3,11 +3,10 @@ import MessageBubble from "../MessageBubble/MessageBubble";
 import TypingIndicator from "../TypingIndicator/TypingIndicator";
 import { useEffect, useRef } from "react";
 import "./ChatWindow.css";
-import MessageBubble from "../MessageBubble/MessageBubble";
-import TypingIndicator from "../TypingIndicator/TypingIndicator";
+
 
 function ChatWindow({ messages, loading }) {
-    const bottomRef = useRef(null);
+   const bottomRef = useRef(null);
 
 useEffect(() => {
   bottomRef.current?.scrollIntoView({
@@ -41,8 +40,6 @@ useEffect(() => {
         ))}
 
         {loading && <TypingIndicator />}
-
-        const bottomRef = useRef(null);
 
         <div ref={bottomRef}></div>
 
