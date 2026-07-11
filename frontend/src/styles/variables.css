@@ -1,0 +1,26 @@
+:root {
+
+  /* Backgrounds */
+  --bg-primary: #202123;
+  --bg-secondary: #171717;
+  --bg-chat: #212121;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #b4b4b4;
+
+  /* Accent */
+  --accent: #10A37F;
+  --accent-hover: #0e8f6f;
+
+  /* Borders */
+  --border: #333333;
+
+  /* Message Bubbles */
+  --user-bubble: #10A37F;
+  --bot-bubble: #303030;
+
+  /* Input */
+  --input-bg: #2b2b2b;
+
+}
