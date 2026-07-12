@@ -1,26 +1,40 @@
 :root {
 
-  /* Backgrounds */
-  --bg-primary: #202123;
-  --bg-secondary: #171717;
-  --bg-chat: #212121;
+  --bg-primary:#202123;
+  --bg-secondary:#171717;
+  --bg-chat:#212121;
 
-  /* Text */
-  --text-primary: #ffffff;
-  --text-secondary: #b4b4b4;
+  --text-primary:#ffffff;
+  --text-secondary:#b4b4b4;
 
-  /* Accent */
-  --accent: #10A37F;
-  --accent-hover: #0e8f6f;
+  --accent:#10A37F;
+  --border:#333333;
 
-  /* Borders */
-  --border: #333333;
+  --user-bubble:#10A37F;
+  --bot-bubble:#303030;
 
-  /* Message Bubbles */
-  --user-bubble: #10A37F;
-  --bot-bubble: #303030;
+  --input-bg:#2b2b2b;
 
-  /* Input */
-  --input-bg: #2b2b2b;
+}
+
+/* 🌞 Light Theme */
+
+[data-theme="light"]{
+
+  --bg-primary:#f5f5f5;
+  --bg-secondary:#ffffff;
+  --bg-chat:#fafafa;
+
+  --text-primary:#111111;
+  --text-secondary:#666666;
+
+  --accent:#10A37F;
+
+  --border:#dddddd;
+
+  --user-bubble:#10A37F;
+  --bot-bubble:#e8e8e8;
+
+  --input-bg:#ffffff;
 
 }
