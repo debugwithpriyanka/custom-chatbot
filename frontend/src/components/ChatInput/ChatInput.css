@@ -11,8 +11,12 @@
     border:none;
     outline:none;
     border-radius:10px;
-    background:var(--input);
-    color:white;
+    background:var(--input-bg);
+    color:var(--text-primary);
+}
+
+.chat-input input::placeholder{
+    color:var(--placeholder);
 }
 
 .chat-input button{
@@ -21,7 +25,7 @@
     border-radius:10px;
     cursor:pointer;
     background:var(--accent);
-    color:white;
+    color: var(--input-text);
 }
 
 @media(max-width:768px){
