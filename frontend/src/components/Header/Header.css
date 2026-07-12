@@ -3,11 +3,27 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 30px;
+    padding:20px;
 
-    background:var(--bg-secondary);
+    background:var(--card-bg);
 
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--border-color);
 
     color:var(--text-primary);
+}
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    color:var(--text-primary);
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-btn{
+    display:block;
+}
+
 }

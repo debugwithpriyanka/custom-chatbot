@@ -1,6 +1,7 @@
 .sidebar{
     width:280px;
     background: var(--bg-secondary);
+    color: var(--text-primary);
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -45,9 +46,7 @@
 }
 
 .history h4{
-
-    color:#999;
-
+    color: var(--text-secondary);
     margin-bottom:15px;
 }
 
@@ -71,15 +70,14 @@
 }
 
 .history-item:hover{
-
-    background:#262626;
+    background: var(--hover);
 }
 
 .bottom{
 
-    border-top:1px solid #333;
-
+    border-top:1px solid var(--border);
     padding-top:15px;
+
 }
 
 .menu{
@@ -99,5 +97,6 @@
 
 .menu:hover{
 
-    background:#262626;
+   background: var(--hover);
+
 }
