@@ -13,6 +13,7 @@ function Home() {
 
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const sendMessage = async (message) => {
 
@@ -33,7 +34,7 @@ function Home() {
 
       const botMessage = {
         sender: "bot",
-        text: response.data.response,
+        text: response.data.reply,
       };
 
       setMessages((prev) => [...prev, botMessage]);
@@ -60,11 +61,15 @@ function Home() {
   return (
     <div className="home">
 
-      <Sidebar />
+      <Sidebar
+        isOpen={sidebarOpen}
+      />
 
       <div className="chat-section">
 
-        <Header />
+        <Header
+          toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+        />
 
         <ChatWindow
           messages={messages}

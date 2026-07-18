@@ -7,10 +7,10 @@ import {
     FiUser
 } from "react-icons/fi";
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
     return (
 
-        <aside className="sidebar">
+        <aside className={`sidebar ${isOpen ? "open" : "closed"}`}>
 
             <div>
 

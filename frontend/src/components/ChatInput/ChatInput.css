@@ -13,6 +13,7 @@
     border-radius:10px;
     background:var(--input-bg);
     color:var(--text-primary);
+     min-width:0;
 }
 
 .chat-input input::placeholder{

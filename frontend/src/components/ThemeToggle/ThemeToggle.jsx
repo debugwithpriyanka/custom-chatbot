@@ -1,16 +1,20 @@
 import "./ThemeToggle.css";
 import { useTheme } from "../../hooks/useTheme";
+import { Sun, Moon } from "lucide-react";
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <button
-      className="theme-toggle"
+      className={`theme-toggle ${theme}`}
       onClick={toggleTheme}
-      title="Toggle Theme"
+      aria-label="Toggle theme"
     >
-      {theme === "dark" ? "🌙" : "☀️"}
+      <Sun size={18} className="icon sun" />
+      <Moon size={18} className="icon moon" />
+
+      <div className="toggle-thumb"></div>
     </button>
   );
 }
