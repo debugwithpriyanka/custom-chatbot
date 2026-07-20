@@ -1,157 +1,185 @@
 .sidebar{
-    width:280px;
-    min-width:280px;
-    height:100vh;
+    width:300px;
+    background:var(--bg-secondary);
+    border-right:1px solid var(--border);
 
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 
-    padding:20px;
+    padding:28px 22px;
 
-    background:var(--bg-secondary);
-
-    border-right:1px solid var(--border);
-
-    overflow:hidden;
-
-    transition:width .3s ease;
+    transition:.3s;
 }
 
-.sidebar.closed{
-    width:88px;
-    min-width:88px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+    margin-bottom: 24px;
+    padding-left: 6px;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.new-chat {
+    width: 100%;
 
-    font-size:22px;
-    font-weight:700;
-    color:var(--text-primary);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-.new-chat{
-    width:100%;
-    min-height:52px;
+    padding: 14px 18px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    border: none;
+    border-radius: 14px;
 
-    gap:10px;
+    cursor: pointer;
 
-    padding:14px 18px;
+    background: var(--accent);
+    color: white;
 
-    border:none;
-    border-radius:14px;
+    font-size: 1.05rem;
+    font-weight: 600;
 
-    cursor:pointer;
-
-    background:var(--accent);
-    color:var(--button-text);
-
-    font-size:16px;
-    font-weight:600;
-
-    white-space:nowrap;
-
-    transition:.25s ease;
+    transition: .25s ease;
 }
 
 .new-chat:hover{
-    background:var(--accent-hover);
+    transform: translateY(-2px);
+    background: var(--accent-hover);
 }
 
 .history{
-    margin-top:32px;
+
     flex:1;
+
+    margin-top:45px;
+
+    overflow-y:auto;
+
 }
 
 .history h4{
+
+    margin-bottom:18px;
+
     color:var(--text-secondary);
-    margin-bottom:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
 }
 
 .history-item{
+
     display:flex;
     align-items:center;
+    justify-content:space-between;
+
     gap:12px;
 
-    padding:12px;
-    border-radius:10px;
+    padding:14px;
+
+    border-radius:12px;
 
     cursor:pointer;
-    margin-bottom:8px;
 
-    color:var(--text-primary);
+    transition:.25s;
 
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-
-    transition:.2s ease;
+    margin-bottom:10px;
 }
 
 .history-item:hover{
+
     background:var(--hover);
+
+}
+
+.history-item.active{
+
+    background:var(--accent);
+
+    color:white;
+
 }
 
 .bottom{
+
     border-top:1px solid var(--border);
-    padding-top:16px;
+
+    padding-top:18px;
+
 }
 
 .menu{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
 
-    padding:12px;
-    border-radius:10px;
+    padding:14px;
+
+    border-radius:12px;
 
     cursor:pointer;
 
-    color:var(--text-primary);
+    transition:.25s;
 
-    transition:.2s ease;
 }
 
 .menu:hover{
+
     background:var(--hover);
+
 }
 
-.sidebar.closed h2,
-.sidebar.closed h4,
-.sidebar.closed span{
-    display:none;
+.delete-btn{
+
+    opacity:0;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
 }
 
-.sidebar.closed .new-chat,
-.sidebar.closed .menu,
-.sidebar.closed .history-item{
-    justify-content:center;
+.history-item:hover .delete-btn{
+
+    opacity:1;
+
 }
 
-@media(max-width:768px){
+.delete-btn:hover{
 
-.sidebar{
-    position:fixed;
-    left:-100%;
-    top:0;
+    transform:scale(1.2);
 
-    width:260px;
-    min-width:260px;
-
-    z-index:1000;
-
-    transition:left .3s ease;
 }
 
-.sidebar.open{
-    left:0;
+.history-item.active{
+
+    background:var(--accent);
+
+    color:white;
+
 }
+
+.history-item.active svg{
+
+    color:white;
 
 }

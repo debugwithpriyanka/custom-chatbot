@@ -1,50 +1,59 @@
 .message{
+
     display:flex;
+
+    gap:14px;
+
+    margin:26px 0;
+
     align-items:flex-end;
-    gap:12px;
-    margin:18px 0;
+
 }
 
 .message.user{
+
     justify-content:flex-end;
-    background: var(--primary-color);
+
 }
 
 .message.bot{
+
     justify-content:flex-start;
-    background: var(--card-bg);
-    color: var(--text-color);
+
 }
 
 .bubble{
+
     max-width:70%;
-    padding:14px 18px;
+
+    padding:16px 22px;
+
     border-radius:18px;
+
     line-height:1.7;
+
+    font-size:16px;
+
     word-break:break-word;
-    font-size:15px;
+
 }
 
 .user .bubble{
-    background:#10A37F;
+
+    background:var(--user-message);
+
     color:white;
+
     border-bottom-right-radius:6px;
+
 }
 
 .bot .bubble{
-    background:#303030;
-    color:white;
+
+    background:var(--bot-message);
+
+    color:var(--text-primary);
+
     border-bottom-left-radius:6px;
-}
-
-.message-bubble{
-    max-width:75%;
-}
-
-@media(max-width:768px){
-
-.message-bubble{
-    max-width:90%;
-}
 
 }

@@ -14,7 +14,7 @@ function Header({ toggleSidebar }) {
         <Menu size={22} />
       </button>
 
-      <h1>AI Assistant</h1>
+      <h1>Express AI</h1>
 
       <ThemeToggle />
 

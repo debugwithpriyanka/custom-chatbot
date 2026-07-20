@@ -16,7 +16,7 @@ function MessageBubble({ sender, text }) {
       )}
 
       <div className="bubble">
-        {text}
+        {String(text)}
       </div>
 
       {isUser && (

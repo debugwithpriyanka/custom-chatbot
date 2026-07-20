@@ -15,6 +15,9 @@ def chat():
 
     response = llm.invoke(msg)
 
+    print(response)
+    print(type(response))
+
     return jsonify({
         "response": response
     })
